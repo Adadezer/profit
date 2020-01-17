@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.6">
+        <title>Sidebar Profit</title>
+
+        <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/dashboard/"> -->
+
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+        <!-- Favicons
+        <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+        <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+        <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+        <link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+        <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#563d7c"> -->
+        
+        <!--CSS-->
+        <link href="/style.css" rel="stylesheet"> 
+    </head>
+
+    
+
+    <body>
+        <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+            <img id="imgProfitNavbar" src="/img/Profit-mais.png" class="navbar-brand col-sm-3 col-md-2 mr-0">
+            <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+            <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-sm-3 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+
+                            <div id="accordion">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapseData">
+                                                <span data-feather="calendar"></span>
+                                                Data<span class="sr-only">(current)</span>
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapseData" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <form class="form-inline">
+                                                <label>Período inicial:</label>
+                                                <input type="date" class="form-control form-group">
+                                
+                                                <label>Período final:</label>
+                                                <input type="date" class="form-control form-group">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapseTipoPreco">
+                                                <span data-feather="dollar-sign"></span>
+                                                Tipo de Preço
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapseTipoPreco" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="custom-control custom-checkbox ">
+                                                  <input type="checkbox" class="custom-control-input" id="customCheckAtacado">
+                                                  <label class="custom-control-label" for="customCheckAtacado">Atacado</label>
+                                                </div>
+
+                                                <div class="custom-control custom-checkbox ">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheckVarejo">
+                                                    <label class="custom-control-label" for="customCheckVarejo">Varejo</label>
+                                                </div>
+                                              </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapsePromocionado">
+                                                <span data-feather="shopping-cart"></span>
+                                                Promocionado
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapsePromocionado" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="custom-control custom-switch">
+                                                  <input type="checkbox" class="custom-control-input" id="custonSwitchPromocionado">
+                                                  <label class="custom-control-label" for="custonSwitchPromocionado">Promocionado</label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapsePapelCategoria">
+                                                <span data-feather="file"></span>
+                                                Papel Categoria
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapsePapelCategoria" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                                    Papel da Categoria
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Destino</a>
+                                                    <a class="dropdown-item" href="#">Rotina</a>
+                                                    <a class="dropdown-item" href="#">Conveniênia</a>
+                                                    <a class="dropdown-item" href="#">Sazonal</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapseSensibilidade">
+                                                <span data-feather="award"></span>
+                                                Sensibilidade
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapseSensibilidade" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                                Sensibilidade
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#"> Super Sensível</a>
+                                                <a class="dropdown-item" href="#">Sensível</a>
+                                                <a class="dropdown-item" href="#">Top Não Sensível</a>
+                                                <a class="dropdown-item" href="#">Primeiro Preço</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapseComercial">
+                                                <span data-feather="inbox"></span>
+                                                Comercial
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapseComercial" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                          <form>
+                                            <div id="formDepto" class="form-row">
+                                                <div class="form-group">
+                                                    <label>Departamento</label>
+                                                    <div class="form-inline">
+                                                        <input type="text" class="form-control mr-1" placeholder="Digite o Departamento">
+                                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                                    </div>     
+                                                </div>
+                                            </div>
+
+                                            <div id="formSecao" class="form-row">
+                                                <div class="form-group">
+                                                    <label>Seção</label>
+                                                    <div class="form-inline">
+                                                        <input type="text" class="form-control mr-1" placeholder="Digite a Seção">
+                                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                                    </div>     
+                                                </div>
+                                            </div>
+
+                                            <div id="formGrupo" class="form-row">
+                                                <div class="form-group">
+                                                    <label>Grupo</label>
+                                                    <div class="form-inline">
+                                                        <input type="text" class="form-control mr-1" placeholder="Digite o Grupo">
+                                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                                    </div>     
+                                                </div>
+                                            </div>
+
+                                            <div id="formProduto" class="form-row">
+                                                <div class="form-group">
+                                                    <label>Produto</label>
+                                                    <div class="form-inline">
+                                                        <input type="text" class="form-control mr-1" placeholder="Digite o Produto">
+                                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                                    </div>     
+                                                </div>
+                                            </div>
+
+                                            <div id="formCodigo" class="form-row">
+                                                <div class="form-group">
+                                                    <label>Codigo</label>
+                                                    <div class="form-inline">
+                                                        <input type="text" class="form-control mr-1" placeholder="Digite o Código">
+                                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                                    </div>     
+                                                </div>
+                                            </div> 
+                                          </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapseDados">
+                                                <span data-feather="book-open"></span>
+                                                Consulta
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapseDados" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <form class="form-row">
+                                                
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckAno">
+                                                        <label class="custom-control-label" for="customCheckAno">Ano</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckCodigo">
+                                                        <label class="custom-control-label" for="customCheckCodigo">Código Item</label>
+                                                    </div>
+                                                </div>   
+                                                
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckGrupo">
+                                                        <label class="custom-control-label" for="customCheckGrupo">Grupo</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckPapelCategoria">
+                                                        <label class="custom-control-label" for="customCheckPapelCategoria">Papel da Categoria</label>
+                                                    </div>
+                                                </div>  
+
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckBandeira">
+                                                        <label class="custom-control-label" for="customCheckBandeira">Bandeira</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckDepto">
+                                                        <label class="custom-control-label" for="customCheckDepto">Departamento</label>
+                                                    </div>
+                                                </div>  
+
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckLoja">
+                                                        <label class="custom-control-label" for="customCheckLoja">Loja</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckSecao">
+                                                        <label class="custom-control-label" for="customCheckSecao">Seção</label>
+                                                    </div>
+                                                </div> 
+                                                
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckCidade">
+                                                        <label class="custom-control-label" for="customCheckCidade">Cidade</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckProduto">
+                                                        <label class="custom-control-label" for="customCheckProduto">Produto</label>
+                                                    </div>
+                                                </div> 
+                                                
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckMes">
+                                                        <label class="custom-control-label" for="customCheckMes">Mês</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckSensibilidade">
+                                                        <label class="custom-control-label" for="customCheckSensibilidade">Sensibilidade</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckCluster">
+                                                        <label class="custom-control-label" for="customCheckCluster">Cluster</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckFornecedor">
+                                                        <label class="custom-control-label" for="customCheckFornecedor">Fornecedor</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group form-inline">
+                                                    <div class="custom-control custom-checkbox mr-4">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckNomeConcorrente">
+                                                        <label class="custom-control-label" for="customCheckNomeConcorrente">Nome Concorrente</label>
+                                                    </div>
+
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheckTipoConcorrente">
+                                                        <label class="custom-control-label" for="customCheckTipoConcorrente">Tipo Concorrente</label>
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapseReferencia">
+                                                <span data-feather="target"></span>
+                                                Referência
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapseReferencia" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                          
+                                            <div id="RefCidade" class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle btn-block mb-3" data-toggle="dropdown">
+                                                    Cidade
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Bauru</a>
+                                                    <a class="dropdown-item" href="#">Assis</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos</a>
+                                                    <a class="dropdown-item" href="#">St. André</a>
+                                                    <a class="dropdown-item" href="#">St. Cruz</a>
+                                                    <a class="dropdown-item" href="#">Piraju</a>
+                                                </div>
+                                            </div>
+
+                                            <div id="RefCluster" class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle btn-block mb-3" data-toggle="dropdown">
+                                                    Cluster
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Bauru</a>
+                                                    <a class="dropdown-item" href="#">Assis</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos</a>
+                                                    <a class="dropdown-item" href="#">St. André</a>
+                                                    <a class="dropdown-item" href="#">St. Cruz</a>
+                                                    <a class="dropdown-item" href="#">Piraju</a>
+                                                </div>
+                                            </div>
+
+                                            <div id="RefLoja" class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle btn-block mb-3" data-toggle="dropdown">
+                                                    Loja
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Bauru</a>
+                                                    <a class="dropdown-item" href="#">Assis</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos Raposo</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos Vila Musa</a>
+                                                    <a class="dropdown-item" href="#">St. André</a>
+                                                    <a class="dropdown-item" href="#">St. Cruz</a>
+                                                    <a class="dropdown-item" href="#">Piraju</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <li class="nav-item">
+                                            <a class="card-link nav-link active" data-toggle="collapse" href="#collapseConcorrencia">
+                                                <span data-feather="truck"></span>
+                                                Concorrência
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <div id="collapseConcorrencia" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                          
+                                            <div id="ConcCidade" class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle btn-block mb-3" data-toggle="dropdown">
+                                                    Cidade
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Bauru</a>
+                                                    <a class="dropdown-item" href="#">Assis</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos Raposo</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos Vila Musa</a>
+                                                    <a class="dropdown-item" href="#">St. André</a>
+                                                    <a class="dropdown-item" href="#">St. Cruz</a>
+                                                    <a class="dropdown-item" href="#">Piraju</a>
+                                                </div>
+                                            </div>
+
+                                            <div id="ConcBandeira" class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle btn-block mb-3" data-toggle="dropdown">
+                                                    Bandeira
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Coop</a>
+                                                    <a class="dropdown-item" href="#">Amigão</a>
+                                                    <a class="dropdown-item" href="#">São Sebastião</a>
+                                                    <a class="dropdown-item" href="#">Nicolau</a>
+                                                    <a class="dropdown-item" href="#">Confiança</a>
+                                                    <a class="dropdown-item" href="#">Chama</a>
+                                                    <a class="dropdown-item" href="#">Avenida</a>
+                                                    <a class="dropdown-item" href="#">Cidão</a>
+                                                    <a class="dropdown-item" href="#">Tauste</a>
+                                                    <a class="dropdown-item" href="#">Maitan</a>
+                                                </div>
+                                            </div>
+
+                                            <div id="ConcLoja" class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle btn-block mb-3" data-toggle="dropdown">
+                                                    Loja
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Bauru</a>
+                                                    <a class="dropdown-item" href="#">Assis</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos Raposo</a>
+                                                    <a class="dropdown-item" href="#">Ourinhos Vila Musa</a>
+                                                    <a class="dropdown-item" href="#">St. André</a>
+                                                    <a class="dropdown-item" href="#">St. Cruz</a>
+                                                    <a class="dropdown-item" href="#">Piraju</a>
+                                                </div>
+                                            </div>
+
+                                            <div id="ConcTipo" class="dropdown">
+                                                <button type="button" class="btn btn-primary dropdown-toggle btn-block mb-3" data-toggle="dropdown">
+                                                    Tipo de Concorrente
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Primario</a>
+                                                    <a class="dropdown-item" href="#">Secundario</a>
+                                                    <a class="dropdown-item" href="#">Expandido</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--accordion-->
+                        </ul> <!--class="nav flex-column"-->
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Saved reports</span>
+                            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+                                <span data-feather="plus-circle"></span>
+                            </a>
+                        </h6>
+                        <ul class="nav flex-column mb-2">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Current month
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Last quarter
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Social engagement
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="file-text"></span>
+                                    Year-end sale
+                                </a>
+                            </li>
+                        </ul> <!--class="nav flex-column"-->
+                    </div> <!--class="sidebar-sticky"-->
+                </nav>
+
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Dashboard</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <div class="btn-group mr-2">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                <span data-feather="calendar"></span>
+                                This week
+                            </button>
+                        </div>
+                    </div>
+
+                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+                    <h2>Section title</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                <th>#</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1,001</td>
+                                    <td>Lorem</td>
+                                    <td>ipsum</td>
+                                    <td>dolor</td>
+                                    <td>sit</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,002</td>
+                                    <td>amet</td>
+                                    <td>consectetur</td>
+                                    <td>adipiscing</td>
+                                    <td>elit</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>Integer</td>
+                                    <td>nec</td>
+                                    <td>odio</td>
+                                    <td>Praesent</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,003</td>
+                                    <td>libero</td>
+                                    <td>Sed</td>
+                                    <td>cursus</td>
+                                    <td>ante</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,004</td>
+                                    <td>dapibus</td>
+                                    <td>diam</td>
+                                    <td>Sed</td>
+                                    <td>nisi</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,005</td>
+                                    <td>Nulla</td>
+                                    <td>quis</td>
+                                    <td>sem</td>
+                                    <td>at</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,006</td>
+                                    <td>nibh</td>
+                                    <td>elementum</td>
+                                    <td>imperdiet</td>
+                                    <td>Duis</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,007</td>
+                                    <td>sagittis</td>
+                                    <td>ipsum</td>
+                                    <td>Praesent</td>
+                                    <td>mauris</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,008</td>
+                                    <td>Fusce</td>
+                                    <td>nec</td>
+                                    <td>tellus</td>
+                                    <td>sed</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,009</td>
+                                    <td>augue</td>
+                                    <td>semper</td>
+                                    <td>porta</td>
+                                    <td>Mauris</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,010</td>
+                                    <td>massa</td>
+                                    <td>Vestibulum</td>
+                                    <td>lacinia</td>
+                                    <td>arcu</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,011</td>
+                                    <td>eget</td>
+                                    <td>nulla</td>
+                                    <td>Class</td>
+                                    <td>aptent</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,012</td>
+                                    <td>taciti</td>
+                                    <td>sociosqu</td>
+                                    <td>ad</td>
+                                    <td>litora</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,013</td>
+                                    <td>torquent</td>
+                                    <td>per</td>
+                                    <td>conubia</td>
+                                    <td>nostra</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,014</td>
+                                    <td>per</td>
+                                    <td>inceptos</td>
+                                    <td>himenaeos</td>
+                                    <td>Curabitur</td>
+                                </tr>
+
+                                <tr>
+                                    <td>1,015</td>
+                                    <td>sodales</td>
+                                    <td>ligula</td>
+                                    <td>in</td>
+                                    <td>libero</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!--class="table-responsive"-->
+                </main>
+            </div> <!--row do container-fluid-->
+        </div> <!--class="container-fluid"-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="/script.js"></script>
+    </body>
+</html>
